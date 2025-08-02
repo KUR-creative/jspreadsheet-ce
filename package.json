@@ -47,7 +47,7 @@
         "datasheet"
     ],
     "dependencies": {
-        "@jspreadsheet/formula": "^2.0.2",
+        "@jspreadsheet/formula": "https://github.com/KUR-creative/jspreadsheet-ce/releases/download/2.0.2/jspreadsheet-formula-2.0.2.tgz",
         "jsuites": "^5.8.5"
     },
     "devDependencies": {
