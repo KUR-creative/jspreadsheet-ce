@@ -2952,7 +2952,7 @@ if (!formula && typeof (require) === 'function') {
                         // Redefining styles
                         for (let i = px; i <= ux; i++) {
                             for (let j = py; j <= uy; j++) {
-                                console.log('j', j, ', i', i, ', r', obj.records[j][i], 'obj.rows[j]', obj.rows[j]);
+                                // console.log('j', j, ', i', i, ', r', obj.records[j][i], 'obj.rows[j]', obj.rows[j]);
                                 if (obj.rows[j].element.style.display != 'none' &&
                                     obj.records[j][i] != null &&
                                     obj.records[j][i].element.style.display != 'none') {
@@ -2963,7 +2963,11 @@ if (!formula && typeof (require) === 'function') {
                         }
 
                         for (let i = borderLeft; i <= borderRight; i++) {
-                            if ((!obj.options.columns || !obj.options.columns[i] || obj.options.columns[i].type != 'hidden') && obj.cols[i].colElement.style && obj.cols[i].colElement.style.display != 'none') {
+                            if ((!obj.options.columns || !obj.options.columns[i] ||
+                                obj.options.columns[i].type != 'hidden') &&
+                                obj.cols[i] != null &&
+                                obj.cols[i].colElement.style &&
+                                obj.cols[i].colElement.style.display != 'none') {
                                 // Top border
                                 if (obj.records[borderTop] && obj.records[borderTop][i]) {
                                     obj.records[borderTop][i].element.classList.add('highlight-top');
@@ -2980,9 +2984,15 @@ if (!formula && typeof (require) === 'function') {
                         for (let j = borderTop; j <= borderBottom; j++) {
                             if (obj.rows[j] && obj.rows[j].element.style.display != 'none') {
                                 // Left border
-                                obj.records[j][borderLeft].element.classList.add('highlight-left');
+                                console.log('borderLeft', borderLeft);
+                                if (obj.records[j][borderLeft] != null) {
+                                    obj.records[j][borderLeft].element.classList.add('highlight-left');
+                                }
                                 // Right border
-                                obj.records[j][borderRight].element.classList.add('highlight-right');
+                                console.log('borderRight', borderRight);
+                                if (obj.records[j][borderRight] != null) {
+                                    obj.records[j][borderRight].element.classList.add('highlight-right');
+                                }
                                 // Add selected from rows
                                 obj.rows[j].element.classList.add('selected');
                             }
