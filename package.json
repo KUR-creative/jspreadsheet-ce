@@ -1,5 +1,5 @@
 {
-    "name": "jspreadsheet-ce",
+    "name": "my-jss",
     "title": "The Javascript Spreadsheet",
     "description": "Jspreadsheet is a lightweight, vanilla javascript plugin to create amazing web-based interactive data grids with spreadsheet like controls compatible with Excel, Google Spreadsheets and any other spreadsheet software.",
     "repository": {
