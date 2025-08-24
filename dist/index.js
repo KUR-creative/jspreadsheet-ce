@@ -2952,7 +2952,7 @@ if (!formula && typeof (require) === 'function') {
                         // Redefining styles
                         for (let i = px; i <= ux; i++) {
                             for (let j = py; j <= uy; j++) {
-                                console.log('j', j, ', i', i, ', r', obj.records[j][i], 'obj.rows[j]', obj.rows[j]);
+                                //console.log('j', j, ', i', i, ', r', obj.records[j][i], 'obj.rows[j]', obj.rows[j]);
                                 if (obj.rows[j].element.style.display != 'none' &&
                                     obj.records[j][i] != null &&
                                     obj.records[j][i].element.style.display != 'none') {
